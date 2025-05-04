@@ -1,0 +1,11 @@
+name: ci-cd-learn
+# on – определяет события, которые запускают воркфлоу
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # run – произвольная bash-команда
+      # ls -la выведет содержимое текущего репозитория
+      - run: make say-hello
